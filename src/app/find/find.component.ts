@@ -1,3 +1,4 @@
+import { CocktaildbService } from './../services/cocktaildb.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FindComponent implements OnInit {
 
-  constructor() { }
+  public categories = [];
+  public ingredients = [];
+
+  constructor(public service: CocktaildbService) { }
 
   ngOnInit() {
+
+    
+
   }
+
+  prueba(){
+    this.service.fetchCategories().subscribe(data => {
+      console.log(data.drinks);
+      this.categories = data.drinks;
+    })
+  }
+
+
 
 }

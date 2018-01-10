@@ -1,1 +1,23 @@
+<div class="row justify-content-center mt-3">
+  <div class="col-10">
+    <section class="text-center">
+      <div class="container">
+        <h1 class="jumbotron-heading">The Cocktail Filter</h1>
+        <p class="lead text-muted">Find your favorite cocktails by adding the ingredients separated by commas or select a category in the section below.</p>
+      </div>
+      <div class="input-group">
+        <input type="text" class="form-control">
+        <div class="input-group-append">
+          <button (click)="prueba()" class="btn btn-outline-secondary" type="button">Search!</button>
+        </div>
+      </div>
+    </section>
 
+    <div class="col-10" *ngFor="let x of categories" >
+      <a routerLink="">
+      <h3>{{x.strCategory}}</h3>
+      </a>
+    </div>
+
+  </div>
+</div>

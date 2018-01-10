@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
+import { HttpModule } from '@angular/http';
 
 //Custom Components
 import { NavbarComponent } from './navbar/navbar.component';
@@ -15,6 +16,7 @@ import { IngredientsPipe } from './pipes/ingredients.pipe';
 
 //Services
 import { CocktaildbService } from './services/cocktaildb.service';
+
 
 
 //Routes
@@ -37,6 +39,7 @@ const appRoutes: Routes = [
   ],
   imports: [
     BrowserModule,
+    HttpModule,
     RouterModule.forRoot(appRoutes)
   ],
   providers: [CocktaildbService],
