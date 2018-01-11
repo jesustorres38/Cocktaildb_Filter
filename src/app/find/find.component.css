@@ -1,4 +1,29 @@
-.jumbotron-heading {
-    font-weight: 500;
-    color: rgb(40, 116, 166);
-  }
+.heading {
+  font-weight: 500;
+  color: rgb(40, 116, 166);
+}
+
+.sub-heading {
+  font-weight: 500;
+  color: rgb(40, 116, 166);
+}
+
+.badge-light{
+  font-weight: normal;
+  line-height: normal;
+  margin: .2rem .1rem;
+  font-size: 80%;
+  cursor: pointer;
+}
+
+.badge-light:hover{
+  color: #212529;
+  background-color: #c2c3c4;
+}
+
+.selected{
+  color: #212529;
+  background-color: #c2c3c4;
+}
+
+

@@ -8,10 +8,21 @@ export class CocktaildbService {
 
   constructor(private http: Http) { }
 
+  // GET THE CATEGORIES
   fetchCategories(){
-    // Make the HTTP request:
     return this.http.get('http://www.thecocktaildb.com/api/json/v1/1/list.php?c=list')
     .map(res => res.json());
   }
 
+  // GET INGREDIETNS
+  fetchIngredients(){
+    return this.http.get('http://www.thecocktaildb.com/api/json/v1/1/list.php?i=list')
+    .map(res => res.json());
+  }
+
+  // GET DRINKS BY CATEGORIES
+  fetchByCategory(category){
+    return this.http.get('http://www.thecocktaildb.com/api/json/v1/1/filter.php?c='+category)
+    .map(res => res.json());
+  }
 }

@@ -9,21 +9,34 @@ import { Component, OnInit } from '@angular/core';
 export class FindComponent implements OnInit {
 
   public categories = [];
-  public ingredients = [];
+  public results = [];
+  public category_selected = "";
 
-  constructor(public service: CocktaildbService) { }
+  constructor(public service: CocktaildbService) {
+    // INITIALIZE ARRAYS
+    this.categories = [];
+    this.results = [];
+    this.category_selected = "";
+
+  }
 
   ngOnInit() {
 
     
 
   }
+  searchByCategory(category){
+    this.results = [];
+    this.category_selected = category;
+    this.service.fetchByCategory(category).subscribe(data => {
+      this.results = data.drinks;
+    });
+  }
 
   prueba(){
     this.service.fetchCategories().subscribe(data => {
-      console.log(data.drinks);
       this.categories = data.drinks;
-    })
+    });
   }
 
 
