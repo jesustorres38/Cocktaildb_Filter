@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { HttpModule } from '@angular/http';
+import { FormsModule } from '@angular/forms';
 
 //Custom Components
 import { NavbarComponent } from './navbar/navbar.component';
@@ -40,6 +41,7 @@ const appRoutes: Routes = [
   imports: [
     BrowserModule,
     HttpModule,
+    FormsModule,
     RouterModule.forRoot(appRoutes)
   ],
   providers: [CocktaildbService],

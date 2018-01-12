@@ -7,9 +7,9 @@
       <h1 class="heading">The Cocktail Filter</h1>
       <p class="lead text-muted">Find your favorite cocktails by adding the ingredients separated by commas or select a category in the section below.</p>
       <div class="input-group">
-        <input type="text" class="form-control">
+        <input type="text" class="form-control" [(ngModel)]="searchTerm" placeholder="Ejemplo: Lemon, Brandy">
         <div class="input-group-append">
-          <button (click)="prueba()" class="btn btn-outline-secondary" type="button">Search!</button>
+          <button (click)="searchByIngredient(searchTerm)" class="btn btn-outline-secondary" type="button">Search!</button>
         </div>
       </div>
     </section>
@@ -34,21 +34,16 @@
         <div class="row justify-content-center">
           <div class="col-10 col-sm-6 col-md-3 mt-3" *ngFor="let x of results">
             <a routerLink="/drink-datail">    
-              <!-- <img src="{{x.strDrinkThumb}}" class="img-fluid rounded" alt="{{x.strDrink}}"> -->
               <figure class="figure">
-                  <img src="{{x.strDrinkThumb}}" class="figure-img img-fluid rounded" alt="{{x.strDrink}}">
-                  <figcaption class="figure-caption">{{x.strDrink}}</figcaption>
-                </figure>
+                <img src="{{x.strDrinkThumb}}" class="figure-img img-fluid rounded" alt="{{x.strDrink}}">
+                <figcaption class="figure-caption">{{x.strDrink}}</figcaption>
+              </figure>
             </a>
           </div>
         </div>
       </div>
-        
-      <!-- <div class="col-2" *ngFor="let x of results">
-        <img src="{{x.strDrinkThumb}}" class="img-fluid rounded" alt="{{x.strDrink}}">
-      </div> -->
     </section>
 
-
+    
   </div>
 </div>
