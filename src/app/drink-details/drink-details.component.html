@@ -1,0 +1,27 @@
+<div class="row justify-content-center">
+  <div class="col-12">
+
+
+    <!-- TITLE AND DRINK's DESCRIPTION -->
+    <section class="text-center mt-5" *ngIf="drink_details.length != 0">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-10 order-2 col-sm-6 order-sm-1 col-md-4 order-md-1">
+            <figure class="figure">
+              <img src="{{drink_details[0].strDrinkThumb}}" class="figure-img img-fluid rounded" alt="{{drink_details[0].strDrink}}">
+              <figcaption class="figure-caption">{{drink_details[0].strDrink}}</figcaption>
+            </figure>
+          </div>
+          <div class="col-10 order-1 col-sm-6 order-sm-2 col-md-6 order-md-2">
+            <h3 class="sub-heading mb-3">{{drink_details[0].strDrink}}</h3>
+            <p class="text-left"><strong>Ingredients:</strong> {{ingredients}}</p>
+            <p class="text-left"><strong>Instructions:</strong> {{drink_details[0].strInstructions}}</p>
+            <p class="text-left"><strong>Category:</strong> {{drink_details[0].strCategory}}</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    
+  </div>
+</div>

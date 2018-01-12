@@ -9,15 +9,11 @@ import { FormsModule } from '@angular/forms';
 import { NavbarComponent } from './navbar/navbar.component';
 import { AboutComponent } from './about/about.component';
 import { FindComponent } from './find/find.component';
+import { DrinkDetailsComponent } from './drink-details/drink-details.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-
-//Pipes
-import { CategoryPipe } from './pipes/category.pipe';
-import { IngredientsPipe } from './pipes/ingredients.pipe';
 
 //Services
 import { CocktaildbService } from './services/cocktaildb.service';
-
 
 
 //Routes
@@ -25,6 +21,7 @@ const appRoutes: Routes = [
   { path: '', component: FindComponent },
   { path: 'find', component: FindComponent },
   { path: 'about', component: AboutComponent },
+  { path:'drink-detail/:id', component: DrinkDetailsComponent},
   { path: '**', component: PageNotFoundComponent }
 ];
 
@@ -34,8 +31,7 @@ const appRoutes: Routes = [
     NavbarComponent,
     FindComponent,
     AboutComponent,
-    CategoryPipe,
-    IngredientsPipe,
+    DrinkDetailsComponent,
     PageNotFoundComponent
   ],
   imports: [

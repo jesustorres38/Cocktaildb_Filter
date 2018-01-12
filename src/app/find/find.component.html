@@ -33,7 +33,7 @@
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-10 col-sm-6 col-md-3 mt-3" *ngFor="let x of results">
-            <a routerLink="/drink-datail">    
+            <a routerLink="/drink-detail/{{x.idDrink}}">    
               <figure class="figure">
                 <img src="{{x.strDrinkThumb}}" class="figure-img img-fluid rounded" alt="{{x.strDrink}}">
                 <figcaption class="figure-caption">{{x.strDrink}}</figcaption>

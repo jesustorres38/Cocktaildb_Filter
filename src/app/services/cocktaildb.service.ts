@@ -1,11 +1,13 @@
 import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
+import { ActivatedRoute } from '@angular/router';
+
 
 @Injectable()
 export class CocktaildbService {
 
-  constructor(private http: Http) { }
+  constructor(public http: Http) { }
 
   // GET ALL THE CATEGORIES
   fetchCategories(){
@@ -24,6 +26,13 @@ export class CocktaildbService {
   // GET DRINKS BY INGREDIETNS
   fetchByIngredient(ingredient){
     return this.http.get('http://www.thecocktaildb.com/api/json/v1/1/filter.php?i='+ingredient)
+    .map(res => res.json()); 
+  }
+
+
+  // GET DRINK BY ID
+  fetchById(id){
+    return this.http.get('http://www.thecocktaildb.com/api/json/v1/1/lookup.php?i='+id)
     .map(res => res.json()); 
   }
 
