@@ -17,7 +17,6 @@ export class FindComponent implements OnInit {
   public compare = []; // to compare which drinks have the same ingredients
   public errorMessage = ""; //to show error and mesagges
 
-
   
   // INITIALIZE VALUES
   constructor(public service: CocktaildbService) {

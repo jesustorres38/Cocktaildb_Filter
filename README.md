@@ -6,6 +6,9 @@ Website to find and filter cocktails by ingredients and categories. It consume t
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.1.
 
-## Development server
+## Development 
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+* Clone or download "https://github.com/jesustorres38/Cocktaildb_Filter"
+* Run `npm install -g @angular/cli`
+* Run `npm install` 
+* Run `ng serve --open` 
