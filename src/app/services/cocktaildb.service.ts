@@ -7,7 +7,9 @@ import { ActivatedRoute } from '@angular/router';
 @Injectable()
 export class CocktaildbService {
 
+
   constructor(public http: Http) { }
+
 
   // GET ALL THE CATEGORIES
   fetchCategories(){
@@ -35,6 +37,5 @@ export class CocktaildbService {
     return this.http.get('http://www.thecocktaildb.com/api/json/v1/1/lookup.php?i='+id)
     .map(res => res.json()); 
   }
-
 
 }
